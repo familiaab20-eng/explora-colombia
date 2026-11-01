@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 
-// CORREGIDO: import.meta.env y nombre de constante correcto (API_URL)
 const API_URL =
   import.meta.env.VITE_API_URL ||
   "http://localhost:3000/api/destinos";
@@ -78,6 +77,13 @@ export default function App() {
       </div>
 
       <header className="hero">
+        {/* Bandera de Colombia oficial incorporada en el header */}
+        <div className="hero-flag">
+          <span className="stripe yellow"></span>
+          <span className="stripe blue"></span>
+          <span className="stripe red"></span>
+        </div>
+        
         <div className="hero-content">
           <h1>Explora Colombia</h1>
           <p>Directorio de destinos turísticos y culturales</p>
